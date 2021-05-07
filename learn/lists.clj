@@ -1,0 +1,27 @@
+Clojure 1.10.3
+user=> `(1 2 3)
+(1 2 3)
+user=> `("hello" 1.1 2)
+("hello" 1.1 2)
+user=> `(:key1 :key2)
+(:key1 :key2)
+user=> (first `("this" "is" "a" "list"))
+"this"
+user=> (last `("this" "is" "a" "list"))
+"list"
+user=> (count `("this" "is" "a" "list"))
+4
+user=> (rest `("this" "is" "a" "list"))
+("is" "a" "list")
+user=> (cons 1 `())
+(1)
+user=> (cons 2 nil)
+(2)
+user=> (cons 1 (cons 2 (cons 3 (cons 4 (cons 5 nil)))))
+(1 2 3 4 5)
+user=> (list 1 2 3 4 5)
+(1 2 3 4 5)
+user=> (conj `(:dog :cat :mouse) :tiger :lion)
+(:lion :tiger :dog :cat :mouse)
+user=> (conj `(:dog :cat :mouse) `(:rhino :hippo))
+((:rhino :hippo) :dog :cat :mouse)
